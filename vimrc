@@ -11,7 +11,7 @@ set expandtab
 set tabstop=4
 set shiftwidth=4
 
-source ~/.python_vimrc
+" source ~/.python_vimrc
 
 au BufRead,BufNewFile *.thrift set filetype=thrift
 au! Syntax thrift source ~/.vim/thrift.vim
