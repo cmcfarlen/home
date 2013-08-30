@@ -27,7 +27,7 @@ brew: /usr/local/bin/brew
 
 software: brew
 	brew install ruby macvim node.js zookeeper
-	gem install redcarpet pygments.rb
+	/usr/local/bin/gem install redcarpet pygments.rb
 	npm -g install instant-markdown-d
 
 home: submodules links software
