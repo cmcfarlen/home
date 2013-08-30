@@ -43,5 +43,5 @@ if has("cscope")
     endif
 endif
 
-colorscheme wombat
+colorscheme zenburn
 
