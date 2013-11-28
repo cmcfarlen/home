@@ -4,7 +4,7 @@
 
 ~/dotbackup/.done:
 	mkdir -p ~/dotbackup
-	-mv ~/.vimrc ~/.vim ~/.screenrc ~/dotbackup
+	-mv ~/.vimrc ~/.vim ~/.screenrc ~/.bash_profile ~/.profile ~/dotbackup
 	touch ~/dotbackup/.done
 
 dotbackup: ~/dotbackup/.done
@@ -12,7 +12,7 @@ dotbackup: ~/dotbackup/.done
 ~/.%: ./%
 	ln -sf $(PWD)/$< $@
 
-links: dotbackup ~/.vimrc ~/.screenrc ~/.vim
+links: dotbackup ~/.vimrc ~/.screenrc ~/.vim ~/.bash_profile ~/.profile
 
 submodules:
 	git submodule init

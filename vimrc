@@ -19,6 +19,8 @@ set tabstop=4
 set shiftwidth=4
 set autoindent
 
+set guioptions-=rL
+
 " source ~/.python_vimrc
 
 au BufRead,BufNewFile *.thrift set filetype=thrift
@@ -43,5 +45,6 @@ if has("cscope")
     endif
 endif
 
+set t_Co=256
 colorscheme zenburn
 
