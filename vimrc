@@ -19,7 +19,10 @@ set tabstop=4
 set shiftwidth=4
 set autoindent
 
-set guioptions-=rL
+set guioptions-=r
+set guioptions-=R
+set guioptions-=l
+set guioptions-=L
 
 " source ~/.python_vimrc
 
