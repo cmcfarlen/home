@@ -54,5 +54,6 @@ if has("cscope")
 endif
 
 set t_Co=256
-colorscheme zenburn
+set background=dark
+colorscheme solarized
 
