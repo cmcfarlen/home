@@ -8,6 +8,11 @@ set hlsearch
 
 filetype off
 
+let mapleader = ' '
+let g:paredit_leader = ','
+let g:paredit_matchlines = 200
+let g:paredit_shortmaps = 0 
+
 call pathogen#infect()
 call pathogen#helptags()
 
@@ -39,7 +44,6 @@ let g:rbpt_colorpairs = [
   \ [ '6',  '#2aa198'],
   \ [ '4',  '#268bd2'],
   \ ]
- 
 
 au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
@@ -68,5 +72,22 @@ endif
 set t_Co=256
 set background=dark
 colorscheme solarized
+
+let g:clojure_align_subforms = 1
+let g:clojure_fuzzy_indent = 1
+let g:clojure_fuzzy_indent_patterns = ['^with', '^def', '^let', '^dom', '^table', '^div', '^tr', '^td', '^th', '^span', '^select', '^go', '^PUT', '^GET']
+let g:clojure_fuzzy_indent_blacklist = ['-fn$', '\v^with-%(meta|out-str|loading-context)$']
+let g:clojure_maxlines = 400
+
+map <leader>k :NERDTree<CR>
+
+" Highlight EOL whitespace, http://vim.wikia.com/wiki/Highlight_unwanted_spaces
+highlight ExtraWhitespace ctermbg=darkred guibg=#382424
+autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+
+" The above flashes annoyingly while typing, be calmer in insert mode
+autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 
 set visualbell
