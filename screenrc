@@ -14,4 +14,4 @@ hardstatus string '%{= kw}[ %{= kG}%H%{= kw} ][%= %{= kw}%?%-Lw%?%{= kW}%n*%f %t
 bind 'q' quit
 
 # syntax: screen -t label order command
-screen -t bash 0
+# screen -t bash 0

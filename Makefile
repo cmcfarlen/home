@@ -26,9 +26,7 @@ submodules:
 brew: /usr/local/bin/brew
 
 software: brew
-	brew install ruby macvim node.js zookeeper
-	/usr/local/bin/gem install redcarpet pygments.rb
-	npm -g install instant-markdown-d
+	brew install vim leiningen
 
-home: submodules links software
+home: submodules links
 

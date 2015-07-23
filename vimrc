@@ -90,4 +90,6 @@ autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 
+autocmd FileType asm set noet ts=8 sw=8
+
 set visualbell
